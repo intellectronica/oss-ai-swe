@@ -7,64 +7,77 @@ tags:
 
 | Website | GitHub | License |
 | --- | --- | --- |
-| [aws.amazon.com/q](https://aws.amazon.com/q/) | [aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) | Apache 2.0 |
+| [aws.amazon.com/q](https://aws.amazon.com/q/) | [aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) | Apache&nbsp;2.0 &amp; MIT |
 
-**Amazon Q Developer CLI (Q CLI) is a command-line interface that brings the capabilities of Amazon Q—AWS’s generative-AI-powered coding assistant—directly into your terminal and local development workflow.**
+**Amazon Q Developer CLI (also referred to simply as `q`) brings Amazon Q’s AI-powered assistance and command-line autocompletion to any terminal session.**
 
-Q CLI enables conversational coding, code generation, and refactoring without leaving the shell. It complements the Amazon Q IDE plug-ins by offering an editor-agnostic way to interact with the assistant and is especially useful for lightweight environments such as cloud shells, remote servers, or CI tasks.
+The tool provides natural-language chat, shell command generation, and inline completions for hundreds of popular CLIs such as `git`, `docker`, and `aws`. It is especially handy when you are working over SSH, inside lightweight code editors, or in automation scripts where a full IDE plug-in is not available.
 
-### Key Features
+### Key Features (from the official docs)
 
-* **Conversational assistant** – Ask questions in natural language and receive contextual answers based on your repository contents.
-* **Code generation & modification** – Generate new files, update existing ones, or apply large-scale refactors; Q CLI writes the changes and shows a git diff for review.
-* **Multi-file understanding** – Analyses the entire git repo to provide smarter suggestions and accurate navigation.
-* **Run & test commands** – Can execute unit tests or build commands suggested by the AI, shortening the build-and-verify loop.
-* **Works everywhere** – Runs on macOS, Linux, and Windows (x86‐64 & Arm) with zero external dependencies apart from git and an AWS account.
+* **`q chat`** – start a conversational session to ask questions about your code or AWS services directly in the terminal.
+* **Shell command translation** – turn plain-English instructions into ready-to-run bash/zsh/fish commands.
+* **Inline completions** – context-aware suggestions as you type, covering more than 500 common CLIs.
+* **Git-aware context** – understands the structure and diffs of your current git repository to produce smarter answers.
+* **Context profiles & hooks** – control which files/folders or command output is sent as context, and extend with custom hooks.
 
-### Installation
+### Supported platforms
 
-Amazon distributes pre-built binaries via Homebrew, Chocolatey, and direct download.
+* macOS (Apple Silicon & Intel)
+* Linux (x86-64 & Arm) via AppImage, DEB, or zip
+* Windows (via WSL2 or using forthcoming native build – see AWS dev blog)
 
-#### Homebrew (macOS / Linux)
+### Installation (summary)
+
+The installation steps vary slightly by operating system. Below is a condensed version; refer to the [official instructions](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html) for full details.
+
+#### macOS (Homebrew)
 
 ```bash
 brew tap aws/tap
 brew install amazon-q-cli
 ```
 
-#### Scoop / Chocolatey (Windows)
+Alternatively, download and open the signed **Amazon Q.dmg** and follow the GUI prompts to enable shell integrations.
 
-```powershell
-choco install amazon-q-cli
-# or
-scoop bucket add aws https://github.com/aws/scoop-bucket.git
-scoop install amazon-q-cli
+#### Linux AppImage
+
+```bash
+curl -LO https://desktop-release.q.us-east-1.amazonaws.com/latest/amazon-q.appimage
+chmod +x amazon-q.appimage
+./amazon-q.appimage
 ```
 
-#### Manual download
+For headless servers you can download the minimal zip that contains only the `q` and `qterm` binaries.
 
-Grab the latest release archive from the [GitHub releases page](https://github.com/aws/amazon-q-developer-cli/releases) and place the extracted `q` binary somewhere on your `$PATH`.
+#### Ubuntu/Debian package
+
+```bash
+wget https://desktop-release.q.us-east-1.amazonaws.com/latest/amazon-q_amd64.deb
+sudo apt install ./amazon-q_amd64.deb
+```
 
 ### Quickstart
 
-1. **Authenticate** – Set up your AWS credentials (via `aws configure`) and run `q init` to complete OAuth sign-in for Amazon Q.
-2. **Enter chat mode** – Inside a git repository, type:
+1. Run `q login` (or launch the GUI once) and authenticate using your **AWS Builder ID** or **AWS IAM Identity Center** credentials.
+2. Inside any directory run:
 
    ```bash
    q chat
    ```
 
-   Then ask something like “generate a UnitTest for `handlers/user.go`”.
-3. **Review changes** – Q CLI stages edits in git; use `git diff` to inspect and `git commit` (or `q accept`) to apply.
+   Ask something like “show me the git commands to squash my last 3 commits”.
+3. For inline completions, ensure your shell is supported (`zsh`, `bash`, or `fish`) and that the installer added the relevant hook to your shell rc file.
 
-### Links
+### Helpful links
 
-* **GitHub:** https://github.com/aws/amazon-q-developer-cli
-* **Docs:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is-qdeveloper.html
-* **AWS announcement blog:** https://aws.amazon.com/blogs/aws/meet-amazon-q/
+* **Documentation:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html
+* **CLI command reference:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-reference.html
+* **GitHub repository:** https://github.com/aws/amazon-q-developer-cli
+* **Supported environments:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-supported-envs.html
 
-### Tutorials & Resources
+### Tutorials & Blog posts
 
-* **Getting started with Amazon Q Developer CLI** – AWS YouTube (2024) — https://www.youtube.com/watch?v=qcli_demo
-* **Automating refactors with Q CLI** – AWS Dev Blog — https://aws.amazon.com/blogs/developer/q-cli-refactor/
-
+* *Getting started with Amazon Q Developer CLI* – AWS YouTube (2024).
+* *How to install Amazon Q CLI on Ubuntu* – AWS Docs.
+* *Using Git-aware file selection with Q CLI* – Amazon Q User Guide.
