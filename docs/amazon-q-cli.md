@@ -74,8 +74,3 @@ sudo apt install ./amazon-q_amd64.deb
 *   **GitHub:** https://github.com/aws/amazon-q-developer-cli
 *   **Supported environments:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-supported-envs.html
 
-## Tutorials
-
-*   **Getting started with Amazon Q Developer CLI** — AWS YouTube (2024)
-*   **Installing Amazon Q CLI on Ubuntu** — AWS Docs blog
-*   **Git-aware file selection with Q CLI** — Amazon Q User Guide
