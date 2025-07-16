@@ -5,6 +5,7 @@ This is a community-managed informational website with a comprehensive guide to 
 ---
 
 - [Aider](./aider.md)
+- [Amazon Q Developer CLI](./amazon-q-cli.md)
 - [Cline](./cline.md)
 - [Codex CLI](./codex-cli.md)
 - [Continue](./continue.md)
@@ -17,6 +18,7 @@ This is a community-managed informational website with a comprehensive guide to 
 - [Refact](./refact.md)
 - [RooCode](./roocode.md)
 - [Ruler](./ruler.md)
-- [Trae](./trae.md)
+ - [Trae](./trae.md)
 - [Vibe Kanban](./vibe-kanban.md)
 - [Zed](./zed.md)
+- [Tabby](./tabby.md)
