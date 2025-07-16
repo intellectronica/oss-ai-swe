@@ -3,13 +3,13 @@ tags:
   - cli
 ---
 
-# Amazon Q Developer CLI
+# Amazon Q CLI
 
 | Website | GitHub | License |
 | --- | --- | --- |
 | [aws.amazon.com/q](https://aws.amazon.com/q/) | [aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) | Apache&nbsp;2.0 &amp; MIT |
 
-**Amazon Q Developer CLI (also known as `q`) is a command-line companion that brings Amazon Q’s AI-powered chat and autocompletion features to your terminal.**
+# **Amazon Q CLI (also known simply as `q`) is a command-line companion that brings Amazon Q’s AI-powered chat and autocompletion features to your terminal.**
 
 With `q` you can have a natural-language conversation, translate plain-English requests into shell commands, and receive inline completions for more than 500 popular CLIs such as `git`, `docker`, and `aws`.
 
@@ -69,8 +69,7 @@ sudo apt install ./amazon-q_amd64.deb
 
 ## Links
 
-*   **Docs – Using Q on the command line:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html
-*   **CLI reference:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-reference.html
-*   **GitHub:** https://github.com/aws/amazon-q-developer-cli
-*   **Supported environments:** https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-supported-envs.html
-
+* **Docs – Using Q on the command line:** <https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html>
+* **CLI reference:** <https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-reference.html>
+* **GitHub:** <https://github.com/aws/amazon-q-developer-cli>
+* **Supported environments:** <https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-supported-envs.html>
