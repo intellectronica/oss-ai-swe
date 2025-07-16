@@ -9,7 +9,7 @@ tags:
 | --- | --- | --- |
 | [aws.amazon.com/q](https://aws.amazon.com/q/) | [aws/amazon-q-developer-cli](https://github.com/aws/amazon-q-developer-cli) | Apache&nbsp;2.0 &amp; MIT |
 
-# **Amazon Q CLI (also known simply as `q`) is a command-line companion that brings Amazon Q’s AI-powered chat and autocompletion features to your terminal.**
+**Amazon Q CLI (also known simply as `q`) is a command-line companion that brings Amazon Q’s AI-powered chat and autocompletion features to your terminal.**
 
 With `q` you can have a natural-language conversation, translate plain-English requests into shell commands, and receive inline completions for more than 500 popular CLIs such as `git`, `docker`, and `aws`.
 
