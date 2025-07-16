@@ -5,7 +5,7 @@ This is a community-managed informational website with a comprehensive guide to 
 ---
 
 - [Aider](./aider.md)
-- [Amazon Q Developer CLI](./amazon-q-cli.md)
+ - [Amazon Q CLI](./amazon-q-cli.md)
 - [Cline](./cline.md)
 - [Codex CLI](./codex-cli.md)
 - [Continue](./continue.md)
