@@ -21,4 +21,3 @@ This is a community-managed informational website with a comprehensive guide to 
  - [Trae](./trae.md)
 - [Vibe Kanban](./vibe-kanban.md)
 - [Zed](./zed.md)
-- [Tabby](./tabby.md)
