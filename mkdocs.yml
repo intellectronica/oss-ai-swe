@@ -44,7 +44,7 @@ nav:
   - Tags: tags.md
   - Tools:
     - Aider: aider.md
-    - Amazon Q Developer CLI: amazon-q-cli.md
+    - Amazon Q CLI: amazon-q-cli.md
     - Cline: cline.md
     - Codex CLI: codex-cli.md
     - Continue: continue.md
